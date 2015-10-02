@@ -37,12 +37,12 @@
 
 		<strong>コンテンツ:</strong>
 		<%== @post.content %>
-
 	<p>
 		<strong>この記事のライター:</strong>
 		<%= @post.name %>
 	</p>
 <% end %>
+   <%= image_tag(@post.image) %>
 <% if user_signed_in? %>
 	<% if current_user.role=="admin" %>
 		<br>
